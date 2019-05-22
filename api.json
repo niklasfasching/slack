@@ -1,0 +1,1159 @@
+{
+  "https://api.slack.com/events/accounts_changed": {
+    "type": "accounts_changed"
+  },
+  "https://api.slack.com/events/app_home_opened": {
+    "channel": "D0LAN2Q65",
+    "event_ts": "1515449522000016",
+    "type": "app_home_opened",
+    "user": "U061F7AUR"
+  },
+  "https://api.slack.com/events/app_mention": {
+    "channel": "C0LAN2Q65",
+    "event_ts": "1515449522000016",
+    "text": "\u003c@U0LAN0Z89\u003eisiteverythingarivershouldbe?",
+    "ts": "1515449522.000016",
+    "type": "app_mention",
+    "user": "U061F7AUR"
+  },
+  "https://api.slack.com/events/app_rate_limited": {
+    "api_app_id": "A123456",
+    "minute_rate_limited": 1518467820,
+    "team_id": "T123456",
+    "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
+    "type": "app_rate_limited"
+  },
+  "https://api.slack.com/events/app_uninstalled": {
+    "api_app_id": "AXXXXXXXXX",
+    "event": {
+      "type": "app_uninstalled"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/bot_added": {
+    "bot": {
+      "app_id": "A4H1JB4AZ",
+      "icons": {
+        "image_48": "https://slack.com/path/to/hugbot_48.png"
+      },
+      "id": "B024BE7LH",
+      "name": "hugbot"
+    },
+    "type": "bot_added"
+  },
+  "https://api.slack.com/events/bot_changed": {
+    "bot": {
+      "app_id": "A4H1JB4AZ",
+      "icons": {
+        "image_48": "https://slack.com/path/to/hugbot_48.png"
+      },
+      "id": "B024BE7LH",
+      "name": "hugbot"
+    },
+    "type": "bot_changed"
+  },
+  "https://api.slack.com/events/channel_archive": {
+    "channel": "C024BE91L",
+    "type": "channel_archive",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/channel_created": {
+    "channel": {
+      "created": 1360782804,
+      "creator": "U024BE7LH",
+      "id": "C024BE91L",
+      "name": "fun"
+    },
+    "type": "channel_created"
+  },
+  "https://api.slack.com/events/channel_deleted": {
+    "channel": "C024BE91L",
+    "type": "channel_deleted"
+  },
+  "https://api.slack.com/events/channel_history_changed": {
+    "event_ts": "1361482916.000004",
+    "latest": "1358877455.000010",
+    "ts": "1361482916.000003",
+    "type": "channel_history_changed"
+  },
+  "https://api.slack.com/events/channel_joined": {
+    "channel": {},
+    "type": "channel_joined"
+  },
+  "https://api.slack.com/events/channel_left": {
+    "channel": "C024BE91L",
+    "type": "channel_left"
+  },
+  "https://api.slack.com/events/channel_marked": {
+    "channel": "C024BE91L",
+    "ts": "1401383885.000061",
+    "type": "channel_marked"
+  },
+  "https://api.slack.com/events/channel_rename": {
+    "channel": {
+      "created": 1360782804,
+      "id": "C02ELGNBH",
+      "name": "new_name"
+    },
+    "type": "channel_rename"
+  },
+  "https://api.slack.com/events/channel_unarchive": {
+    "channel": "C024BE91L",
+    "type": "channel_unarchive",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/commands_changed": {
+    "event_ts": "1361482916.000004",
+    "type": "commands_changed"
+  },
+  "https://api.slack.com/events/dnd_updated": {
+    "dnd_status": {
+      "dnd_enabled": true,
+      "next_dnd_end_ts": 1450423800,
+      "next_dnd_start_ts": 1450387800,
+      "snooze_enabled": true,
+      "snooze_endtime": 1450373897
+    },
+    "type": "dnd_updated",
+    "user": "U1234"
+  },
+  "https://api.slack.com/events/dnd_updated_user": {
+    "dnd_status": {
+      "dnd_enabled": true,
+      "next_dnd_end_ts": 1450423800,
+      "next_dnd_start_ts": 1450387800
+    },
+    "type": "dnd_updated_user",
+    "user": "U1234"
+  },
+  "https://api.slack.com/events/email_domain_changed": {
+    "email_domain": "example.com",
+    "event_ts": "1360782804.083113",
+    "type": "email_domain_changed"
+  },
+  "https://api.slack.com/events/emoji_changed": {
+    "event_ts": "1361482916.000004",
+    "names": [
+      "picard_facepalm"
+    ],
+    "subtype": "remove",
+    "type": "emoji_changed"
+  },
+  "https://api.slack.com/events/file_change": {
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_change"
+  },
+  "https://api.slack.com/events/file_comment_added": {
+    "comment": {},
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_comment_added"
+  },
+  "https://api.slack.com/events/file_comment_deleted": {
+    "comment": "Fc67890",
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_comment_deleted"
+  },
+  "https://api.slack.com/events/file_comment_edited": {
+    "comment": {},
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_comment_edited"
+  },
+  "https://api.slack.com/events/file_created": {
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_created"
+  },
+  "https://api.slack.com/events/file_deleted": {
+    "event_ts": "1361482916.000004",
+    "file_id": "F2147483862",
+    "type": "file_deleted"
+  },
+  "https://api.slack.com/events/file_public": {
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_public"
+  },
+  "https://api.slack.com/events/file_shared": {
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_shared"
+  },
+  "https://api.slack.com/events/file_unshared": {
+    "file": {
+      "id": "F2147483862"
+    },
+    "file_id": "F2147483862",
+    "type": "file_unshared"
+  },
+  "https://api.slack.com/events/goodbye": {
+    "type": "goodbye"
+  },
+  "https://api.slack.com/events/grid_migration_finished": {
+    "api_app_id": "AXXXXXXXXX",
+    "event": {
+      "enterprise_id": "EXXXXXXXX",
+      "type": "grid_migration_finished"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/grid_migration_started": {
+    "api_app_id": "AXXXXXXXXX",
+    "event": {
+      "enterprise_id": "EXXXXXXXX",
+      "type": "grid_migration_started"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/group_archive": {
+    "channel": "G024BE91L",
+    "type": "group_archive"
+  },
+  "https://api.slack.com/events/group_close": {
+    "channel": "G024BE91L",
+    "type": "group_close",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/group_deleted": {
+    "channel": "G0QN9RGTT",
+    "type": "group_deleted"
+  },
+  "https://api.slack.com/events/group_history_changed": {
+    "event_ts": "1361482916.000004",
+    "latest": "1358877455.000010",
+    "ts": "1361482916.000003",
+    "type": "group_history_changed"
+  },
+  "https://api.slack.com/events/group_joined": {
+    "channel": {},
+    "type": "group_joined"
+  },
+  "https://api.slack.com/events/group_left": {
+    "channel": "G02ELGNBH",
+    "type": "group_left"
+  },
+  "https://api.slack.com/events/group_marked": {
+    "channel": "G024BE91L",
+    "ts": "1401383885.000061",
+    "type": "group_marked"
+  },
+  "https://api.slack.com/events/group_open": {
+    "channel": "G024BE91L",
+    "type": "group_open",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/group_rename": {
+    "channel": {
+      "created": 1360782804,
+      "id": "G02ELGNBH",
+      "name": "new_name"
+    },
+    "type": "group_rename"
+  },
+  "https://api.slack.com/events/group_unarchive": {
+    "channel": "G024BE91L",
+    "type": "group_unarchive"
+  },
+  "https://api.slack.com/events/hello": {
+    "type": "hello"
+  },
+  "https://api.slack.com/events/im_close": {
+    "channel": "D024BE91L",
+    "type": "im_close",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/im_created": {
+    "channel": {},
+    "type": "im_created",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/im_history_changed": {
+    "event_ts": "1361482916.000004",
+    "latest": "1358877455.000010",
+    "ts": "1361482916.000003",
+    "type": "im_history_changed"
+  },
+  "https://api.slack.com/events/im_marked": {
+    "channel": "D024BE91L",
+    "ts": "1401383885.000061",
+    "type": "im_marked"
+  },
+  "https://api.slack.com/events/im_open": {
+    "channel": "D024BE91L",
+    "type": "im_open",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/link_shared": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_users": [
+      "UXXXXXXX1",
+      "UXXXXXXX2"
+    ],
+    "event": {
+      "channel": "Cxxxxxx",
+      "links": [
+        {
+          "domain": "example.com",
+          "url": "https://example.com/12345"
+        },
+        {
+          "domain": "example.com",
+          "url": "https://example.com/67890"
+        },
+        {
+          "domain": "another-example.com",
+          "url": "https://yet.another-example.com/v/abcde"
+        }
+      ],
+      "message_ts": "123456789.9875",
+      "thread_ts": "123456621.1855",
+      "type": "link_shared",
+      "user": "Uxxxxxxx"
+    },
+    "event_id": "Ev08MFMKH6",
+    "event_time": 123456789,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/manual_presence_change": {
+    "presence": "away",
+    "type": "manual_presence_change"
+  },
+  "https://api.slack.com/events/member_joined_channel": {
+    "channel": "C0698JE0H",
+    "channel_type": "C",
+    "inviter": "U123456789",
+    "team": "T024BE7LD",
+    "type": "member_joined_channel",
+    "user": "W06GH7XHN"
+  },
+  "https://api.slack.com/events/member_left_channel": {
+    "channel": "C0698JE0H",
+    "channel_type": "C",
+    "team": "T024BE7LD",
+    "type": "member_left_channel",
+    "user": "W06GH7XHN"
+  },
+  "https://api.slack.com/events/message": {
+    "channel": "C2147483705",
+    "text": "Helloworld",
+    "ts": "1355517523.000005",
+    "type": "message",
+    "user": "U2147483697"
+  },
+  "https://api.slack.com/events/message.app_home": {
+    "api_app_id": "A0PNCHHK2",
+    "authed_teams": [
+      "T061EG9R6"
+    ],
+    "event": {
+      "channel": "D0PNCRP9N",
+      "channel_type": "app_home",
+      "event_ts": "1525215129.000001",
+      "text": "Howmanycatsdidweherdyesterday?",
+      "ts": "1525215129.000001",
+      "type": "message",
+      "user": "U061F7AUR"
+    },
+    "event_id": "Ev0PV52K25",
+    "event_time": 1525215129,
+    "team_id": "T061EG9R6",
+    "token": "one-long-verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/message.channels": {
+    "api_app_id": "A0PNCHHK2",
+    "authed_teams": [
+      "T061EG9R6"
+    ],
+    "event": {
+      "channel": "C024BE91L",
+      "channel_type": "channel",
+      "event_ts": "1355517523.000005",
+      "text": "Livelongandprospect.",
+      "ts": "1355517523.000005",
+      "type": "message",
+      "user": "U2147483697"
+    },
+    "event_id": "Ev0PV52K21",
+    "event_time": 1355517523,
+    "team_id": "T061EG9R6",
+    "token": "one-long-verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/message.groups": {
+    "api_app_id": "A0PNCHHK2",
+    "authed_teams": [
+      "T061EG9R6"
+    ],
+    "event": {
+      "channel": "G024BE91L",
+      "channel_type": "group",
+      "event_ts": "1355517523.000005",
+      "text": "Onecannotprogrammaticallydetectthedifferencebetween`message.mpim`and`message.groups`.",
+      "ts": "1355517523.000005",
+      "type": "message",
+      "user": "U2147483697"
+    },
+    "event_id": "Ev0PV52K21",
+    "event_time": 1355517523,
+    "team_id": "T061EG9R6",
+    "token": "one-long-verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/message.im": {
+    "api_app_id": "A0PNCHHK2",
+    "authed_teams": [
+      "T061EG9R6"
+    ],
+    "event": {
+      "channel": "D024BE91L",
+      "channel_type": "im",
+      "event_ts": "1355517523.000005",
+      "text": "Hellohellocanyouhearme?",
+      "ts": "1355517523.000005",
+      "type": "message",
+      "user": "U2147483697"
+    },
+    "event_id": "Ev0PV52K21",
+    "event_time": 1355517523,
+    "team_id": "T061EG9R6",
+    "token": "one-long-verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/message.mpim": {
+    "api_app_id": "A0PNCHHK2",
+    "authed_teams": [
+      "T061EG9R6"
+    ],
+    "event": {
+      "channel": "G024BE91L",
+      "channel_type": "mpim",
+      "event_ts": "1355517523.000005",
+      "text": "Let'smakeapact.",
+      "ts": "1355517523.000005",
+      "type": "message",
+      "user": "U2147483697"
+    },
+    "event_id": "Ev0PV52K21",
+    "event_time": 1355517523,
+    "team_id": "T061EG9R6",
+    "token": "one-long-verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/pin_added": {
+    "channel_id": "C02ELGNBH",
+    "event_ts": "1360782804.083113",
+    "item": {},
+    "type": "pin_added",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/pin_removed": {
+    "channel_id": "C02ELGNBH",
+    "event_ts": "1360782804.083113",
+    "has_pins": false,
+    "item": {},
+    "type": "pin_removed",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/pref_change": {
+    "name": "messages_theme",
+    "type": "pref_change",
+    "value": "dense"
+  },
+  "https://api.slack.com/events/presence_change": {
+    "presence": "away",
+    "type": "presence_change",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/presence_query": {
+    "ids": [
+      "U061F7AUR",
+      "W123456"
+    ],
+    "type": "presence_query"
+  },
+  "https://api.slack.com/events/presence_sub": {
+    "ids": [
+      "U061F7AUR",
+      "W123456"
+    ],
+    "type": "presence_sub"
+  },
+  "https://api.slack.com/events/reaction_added": {
+    "event_ts": "1360782804.083113",
+    "item": {
+      "channel": "C0G9QF9GZ",
+      "ts": "1360782400.498405",
+      "type": "message"
+    },
+    "item_user": "U0G9QF9C6",
+    "reaction": "thumbsup",
+    "type": "reaction_added",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/reaction_removed": {
+    "event_ts": "1360782804.083113",
+    "item": {
+      "channel": "C0G9QF9GZ",
+      "ts": "1360782400.498405",
+      "type": "message"
+    },
+    "item_user": "U0G9QF9C6",
+    "reaction": "thumbsup",
+    "type": "reaction_removed",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/reconnect_url": {
+    "type": "reconnect_url"
+  },
+  "https://api.slack.com/events/resources_added": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_teams": [],
+    "event": {
+      "resources": [
+        {
+          "resource": {
+            "grant": {
+              "resource_id": "DXXXXXXXX",
+              "type": "specific"
+            },
+            "type": "im"
+          },
+          "scopes": [
+            "chat:write:user",
+            "im:read",
+            "im:history",
+            "commands"
+          ]
+        }
+      ],
+      "type": "resources_added"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/resources_removed": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_teams": [],
+    "event": {
+      "resources": [
+        {
+          "resource": {
+            "grant": {
+              "resource_id": "DXXXXXXXX",
+              "type": "specific"
+            },
+            "type": "im"
+          },
+          "scopes": [
+            "chat:write:user",
+            "im:read",
+            "im:history",
+            "commands"
+          ]
+        }
+      ],
+      "type": "resources_removed"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/scope_denied": {
+    "api_app_id": "A7449NRUL",
+    "authed_teams": [],
+    "event": {
+      "scopes": [
+        "files:read",
+        "files:write",
+        "chat:write"
+      ],
+      "trigger_id": "241582872337.47445629121.string",
+      "type": "scope_denied"
+    },
+    "event_id": "Ev74V2J98E",
+    "event_time": 1505519097,
+    "team_id": "T1DD3JH3K",
+    "token": "verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/scope_granted": {
+    "api_app_id": "A7449NRUL",
+    "authed_teams": [],
+    "event": {
+      "scopes": [
+        "files:read",
+        "files:write",
+        "chat:write"
+      ],
+      "trigger_id": "241582872337.47445629121.string",
+      "type": "scope_granted"
+    },
+    "event_id": "Ev74V2J98E",
+    "event_time": 1505519097,
+    "team_id": "T1DD3JH3K",
+    "token": "verification-token",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/star_added": {
+    "event_ts": "1360782804.083113",
+    "item": {},
+    "type": "star_added",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/star_removed": {
+    "event_ts": "1360782804.083113",
+    "item": {},
+    "type": "star_removed",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/events/subteam_created": {
+    "subteam": {
+      "auto_type": null,
+      "created_by": "U060RNRCZ",
+      "date_create": 1446746793,
+      "date_delete": 0,
+      "date_update": 1446746793,
+      "deleted_by": null,
+      "description": "Marketinggurus,PRexpertsandproductadvocates.",
+      "handle": "marketing-team",
+      "id": "S0615G0KT",
+      "is_external": false,
+      "is_usergroup": true,
+      "name": "MarketingTeam",
+      "prefs": {
+        "channels": [],
+        "groups": []
+      },
+      "team_id": "T060RNRCH",
+      "updated_by": "U060RNRCZ",
+      "user_count": "0"
+    },
+    "type": "subteam_created"
+  },
+  "https://api.slack.com/events/subteam_members_changed": {
+    "added_users": [
+      "U060RNRCZ",
+      "U060ULRC0",
+      "U061309JM"
+    ],
+    "added_users_count": "3",
+    "date_previous_update": 1446670362,
+    "date_update": 1492906952,
+    "removed_users": [
+      "U06129G2V"
+    ],
+    "removed_users_count": "1",
+    "subteam_id": "S0614TZR7",
+    "team_id": "T060RNRCH",
+    "type": "subteam_members_changed"
+  },
+  "https://api.slack.com/events/subteam_self_added": {
+    "subteam_id": "S0615G0KT",
+    "type": "subteam_self_added"
+  },
+  "https://api.slack.com/events/subteam_self_removed": {
+    "subteam_id": "S0615G0KT",
+    "type": "subteam_self_removed"
+  },
+  "https://api.slack.com/events/subteam_updated": {
+    "subteam": {
+      "auto_type": "admin",
+      "created_by": "USLACKBOT",
+      "date_create": 1446598059,
+      "date_delete": 0,
+      "date_update": 1446670362,
+      "deleted_by": null,
+      "description": "AgroupofallAdministratorsonyourteam.",
+      "handle": "admins",
+      "id": "S0614TZR7",
+      "is_external": false,
+      "is_usergroup": true,
+      "name": "TeamAdmins",
+      "prefs": {
+        "channels": [],
+        "groups": []
+      },
+      "team_id": "T060RNRCH",
+      "updated_by": "U060RNRCZ",
+      "user_count": "4",
+      "users": [
+        "U060RNRCZ",
+        "U060ULRC0",
+        "U06129G2V",
+        "U061309JM"
+      ]
+    },
+    "type": "subteam_updated"
+  },
+  "https://api.slack.com/events/team_domain_change": {
+    "domain": "my",
+    "type": "team_domain_change",
+    "url": "https://my.slack.com"
+  },
+  "https://api.slack.com/events/team_join": {
+    "type": "team_join",
+    "user": {}
+  },
+  "https://api.slack.com/events/team_migration_started": {
+    "type": "team_migration_started"
+  },
+  "https://api.slack.com/events/team_plan_change": {
+    "can_add_ura": false,
+    "paid_features": [
+      "feature1",
+      "feature2"
+    ],
+    "plan": "std",
+    "type": "team_plan_change"
+  },
+  "https://api.slack.com/events/team_pref_change": {
+    "name": "slackbot_responses_only_admins",
+    "type": "team_pref_change",
+    "value": true
+  },
+  "https://api.slack.com/events/team_profile_change": {
+    "profile": {
+      "fields": [
+        {}
+      ]
+    },
+    "type": "team_profile_change"
+  },
+  "https://api.slack.com/events/team_profile_delete": {
+    "profile": {
+      "fields": [
+        "Xf06054AAA"
+      ]
+    },
+    "type": "team_profile_delete"
+  },
+  "https://api.slack.com/events/team_profile_reorder": {
+    "profile": {
+      "fields": [
+        {
+          "id": "Xf06054AAA",
+          "ordering": 0
+        }
+      ]
+    },
+    "type": "team_profile_reorder"
+  },
+  "https://api.slack.com/events/team_rename": {
+    "name": "NewTeamNameInc.",
+    "type": "team_rename"
+  },
+  "https://api.slack.com/events/tokens_revoked": {
+    "api_app_id": "AXXXXXXXXX",
+    "event": {
+      "tokens": {
+        "bot": [
+          "UXXXXXXXX"
+        ],
+        "oauth": [
+          "UXXXXXXXX"
+        ]
+      },
+      "type": "tokens_revoked"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/url_verification": {
+    "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
+    "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
+    "type": "url_verification"
+  },
+  "https://api.slack.com/events/user_change": {
+    "type": "user_change",
+    "user": {}
+  },
+  "https://api.slack.com/events/user_resource_denied": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_teams": [],
+    "event": {
+      "scopes": [
+        "reminders:write:user",
+        "reminders:read:user"
+      ],
+      "trigger_id": "27082968880.6048553856.5eb9c671f75c636135fdb6bb9e87b606",
+      "type": "user_resource_denied",
+      "user": "WXXXXXXXX"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/user_resource_granted": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_teams": [],
+    "event": {
+      "scopes": [
+        "reminders:write:user",
+        "reminders:read:user"
+      ],
+      "trigger_id": "27082968880.6048553856.5eb9c671f75c636135fdb6bb9e87b606",
+      "type": "user_resource_granted",
+      "user": "WXXXXXXXX"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/user_resource_removed": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_teams": [],
+    "event": {
+      "trigger_id": "27082968880.6048553856.5eb9c671f75c636135fdb6bb9e87b606",
+      "type": "user_resource_removed",
+      "user": "WXXXXXXXX"
+    },
+    "event_id": "EvXXXXXXXX",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/events/user_typing": {
+    "channel": "C02ELGNBH",
+    "type": "user_typing",
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/types/channel": {
+    "channel": {
+      "created": 1466025154,
+      "creator": "U0G9QF9C6",
+      "id": "C1H9RESGL",
+      "is_archived": false,
+      "is_channel": true,
+      "is_general": false,
+      "is_member": true,
+      "is_mpim": false,
+      "is_org_shared": false,
+      "is_private": false,
+      "is_shared": false,
+      "last_read": "1503435939.000101",
+      "latest": {
+        "attachments": [
+          {
+            "fallback": "Thisisanattachmentfallback",
+            "id": 1,
+            "text": "Don'tgettooattached"
+          }
+        ],
+        "bot_id": "B19LU7CSY",
+        "subtype": "bot_message",
+        "text": "Containmentunitis98%full",
+        "ts": "1503435956.000247",
+        "type": "message",
+        "username": "ecto1138"
+      },
+      "members": [
+        "U0G9QF9C6",
+        "U1QNSQB9U"
+      ],
+      "name": "busting",
+      "name_normalized": "busting",
+      "previous_names": [
+        "dusting"
+      ],
+      "purpose": {
+        "creator": "U0G9QF9C6",
+        "last_set": 1503435128,
+        "value": "Discussbustingghosts"
+      },
+      "topic": {
+        "creator": "U0G9QF9C6",
+        "last_set": 1503435128,
+        "value": "Spiritualcontainmentstrategies"
+      },
+      "unread_count": 1,
+      "unread_count_display": 1
+    },
+    "ok": true
+  },
+  "https://api.slack.com/types/conversation": {
+    "channel": {
+      "created": 1449252889,
+      "creator": "W012A3BCD",
+      "id": "C012AB3CD",
+      "is_archived": false,
+      "is_channel": true,
+      "is_ext_shared": false,
+      "is_general": true,
+      "is_group": false,
+      "is_im": false,
+      "is_member": true,
+      "is_mpim": false,
+      "is_org_shared": false,
+      "is_pending_ext_shared": false,
+      "is_private": false,
+      "is_read_only": false,
+      "is_shared": false,
+      "last_read": "1502126650.228446",
+      "locale": "en-US",
+      "name": "general",
+      "name_normalized": "general",
+      "num_members": 23,
+      "pending_shared": [],
+      "previous_names": [
+        "specifics",
+        "abstractions",
+        "etc"
+      ],
+      "purpose": {
+        "creator": "W012A3BCD",
+        "last_set": 1449709364,
+        "value": "Thispartoftheworkspaceisforfun.Makefunhere."
+      },
+      "topic": {
+        "creator": "W012A3BCD",
+        "last_set": 1449709364,
+        "value": "Forpublicdiscussionofgeneralities"
+      },
+      "unlinked": 0
+    },
+    "ok": true
+  },
+  "https://api.slack.com/types/event": {
+    "api_app_id": "AXXXXXXXXX",
+    "authed_users": [
+      "UXXXXXXX1",
+      "UXXXXXXX2"
+    ],
+    "event": {
+      "event_ts": "1234567890.123456",
+      "type": "name_of_event",
+      "user": "UXXXXXXX1"
+    },
+    "event_id": "Ev08MFMKH6",
+    "event_time": 1234567890,
+    "team_id": "TXXXXXXXX",
+    "token": "XXYYZZ",
+    "type": "event_callback"
+  },
+  "https://api.slack.com/types/file": {
+    "channels": [
+      "C0T8SE4AU"
+    ],
+    "comments_count": 0,
+    "created": 1531763342,
+    "deanimate_gif": "https://.../tedair_deanimate_gif.png",
+    "display_as_bot": false,
+    "editable": false,
+    "external_type": "",
+    "filetype": "gif",
+    "groups": [],
+    "has_rich_preview": false,
+    "id": "F0S43PZDF",
+    "image_exif_rotation": 1,
+    "ims": [],
+    "is_external": false,
+    "is_public": true,
+    "is_starred": false,
+    "mimetype": "image/gif",
+    "mode": "hosted",
+    "name": "tedair.gif",
+    "original_h": 226,
+    "original_w": 176,
+    "permalink": "https://https://.../tedair.gif",
+    "permalink_public": "https://.../...",
+    "pjpeg": "https://.../tedair_pjpeg.jpg",
+    "pretty_type": "GIF",
+    "public_url_shared": false,
+    "shares": {
+      "public": {
+        "C0T8SE4AU": [
+          {
+            "channel_name": "file-under",
+            "latest_reply": "1531763348.000001",
+            "reply_count": 1,
+            "reply_users": [
+              "U061F7AUR"
+            ],
+            "reply_users_count": 1,
+            "team_id": "T061EG9R6",
+            "thread_ts": "1531763273.000015",
+            "ts": "1531763348.000001"
+          }
+        ]
+      }
+    },
+    "size": 137531,
+    "thumb_160": "https://.../tedair_=_160.png",
+    "thumb_360": "https://.../tedair_360.png",
+    "thumb_360_gif": "https://.../tedair_360.gif",
+    "thumb_360_h": 226,
+    "thumb_360_w": 176,
+    "thumb_64": "https://.../tedair_64.png",
+    "thumb_80": "https://.../tedair_80.png",
+    "timestamp": 1531763342,
+    "title": "tedair.gif",
+    "url_private": "https://.../tedair.gif",
+    "url_private_download": "https://.../tedair.gif",
+    "user": "U061F7AUR",
+    "username": ""
+  },
+  "https://api.slack.com/types/group": {
+    "created": 1360782804,
+    "creator": "U024BE7LH",
+    "id": "G024BE91L",
+    "is_archived": false,
+    "is_group": "true",
+    "is_mpim": false,
+    "last_read": "1401383885.000061",
+    "latest": {},
+    "members": [
+      "U024BE7LH"
+    ],
+    "name": "secretplans",
+    "purpose": {
+      "creator": "U024BE7LH",
+      "last_set": 1360782804,
+      "value": "Discusssecretplansthatno-oneelseshouldknow"
+    },
+    "topic": {
+      "creator": "U024BE7LV",
+      "last_set": 1369677212,
+      "value": "Secretplansonhold"
+    },
+    "unread_count": 0,
+    "unread_count_display": 0
+  },
+  "https://api.slack.com/types/im": {
+    "created": 1360782804,
+    "id": "D024BFF1M",
+    "is_im": true,
+    "is_user_deleted": false,
+    "user": "U024BE7LH"
+  },
+  "https://api.slack.com/types/mpim": {
+    "created": 1360782804,
+    "creator": "U024BE7LH",
+    "id": "G024BE91L",
+    "is_group": false,
+    "is_mpim": true,
+    "last_read": "1401383885.000061",
+    "latest": {},
+    "members": [
+      "U024BE7LH"
+    ],
+    "name": "mpdm-user1--user2--user3-1",
+    "unread_count": 0,
+    "unread_count_display": 0
+  },
+  "https://api.slack.com/types/user": {
+    "ok": true,
+    "user": {
+      "color": "9f69e7",
+      "deleted": false,
+      "has_2fa": false,
+      "id": "W012A3CDE",
+      "is_admin": true,
+      "is_app_user": false,
+      "is_bot": false,
+      "is_owner": false,
+      "is_primary_owner": false,
+      "is_restricted": false,
+      "is_stranger": false,
+      "is_ultra_restricted": false,
+      "locale": "en-US",
+      "name": "spengler",
+      "profile": {
+        "avatar_hash": "ge3b51ca72de",
+        "display_name": "spengler",
+        "display_name_normalized": "spengler",
+        "email": "spengler@ghostbusters.example.com",
+        "image_192": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "image_24": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "image_32": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "image_48": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "image_512": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "image_72": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "image_original": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+        "real_name": "EgonSpengler",
+        "real_name_normalized": "EgonSpengler",
+        "status_emoji": ":books:",
+        "status_expiration": 1502138999,
+        "status_text": "Printisdead",
+        "team": "T012AB3C4"
+      },
+      "real_name": "EgonSpengler",
+      "team_id": "T012AB3C4",
+      "tz": "America/New_York",
+      "tz_label": "EasternDaylightTime",
+      "tz_offset": -14400,
+      "updated": 1502138686
+    }
+  },
+  "https://api.slack.com/types/usergroup": {
+    "auto_type": "admin",
+    "created_by": "USLACKBOT",
+    "date_create": 1446598059,
+    "date_delete": 0,
+    "date_update": 1446670362,
+    "deleted_by": null,
+    "description": "AgroupofallAdministratorsonyourworkspace.",
+    "handle": "admins",
+    "id": "S0614TZR7",
+    "is_external": false,
+    "is_usergroup": true,
+    "name": "WorkspaceAdmins",
+    "prefs": {
+      "channels": [],
+      "groups": []
+    },
+    "team_id": "T060RNRCH",
+    "updated_by": "U060RNRCZ",
+    "user_count": "4",
+    "users": [
+      "U060RNRCZ",
+      "U060ULRC0",
+      "U06129G2V",
+      "U061309JM"
+    ]
+  }
+}

@@ -7,7 +7,6 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
-	"reflect"
 	"regexp"
 	"sort"
 	"strings"
@@ -16,115 +15,6 @@ import (
 )
 
 var client = &http.Client{}
-
-type Type struct {
-	names []string
-	value map[string]interface{}
-}
-
-type Types []*Type
-
-type Any struct{}
-
-func (ts *Types) addType(name string, v map[string]interface{}) {
-	for _, t := range *ts {
-		if reflect.DeepEqual(t.value, v) {
-			return
-		}
-	}
-	*ts = append(*ts, &Type{[]string{name}, v})
-}
-
-func (ts *Types) getStructType(name string, v map[string]interface{}, nested bool) string {
-	for _, t := range *ts {
-		if t.names[0] != name {
-			continue
-		}
-		valid := true
-		for k := range v {
-			if _, exists := t.value[k]; !exists {
-				valid = false
-			}
-		}
-		if !valid || !nested {
-			continue
-		}
-		return name
-	}
-	definition, keys := "struct {\n", []string{}
-	for k := range v {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-	for _, k := range keys {
-		definition += fmt.Sprintf("%s %s `json: \"%s\"`\n", k, ts.definition(k, v[k], true), k)
-	}
-	return definition + "\n}"
-}
-
-func (ts *Types) addTypes(name string, v interface{}) {
-	v = standardize(v)
-	switch v := v.(type) {
-	case []interface{}:
-		if len(v) == 0 {
-			return
-		}
-		ts.addTypes(name, v[0])
-	case map[string]interface{}:
-		if len(v) == 0 {
-			return
-		}
-		for k, x := range v {
-			ts.addTypes(k, x)
-		}
-		ts.addType(name, v)
-	}
-}
-
-func (ts *Types) merge() {
-	mergedTs, m := Types{}, map[string][]*Type{}
-	for _, t := range *ts {
-		if len(t.names) == 1 {
-			m[t.names[0]] = append(m[t.names[0]], t)
-		} //  else {
-		// 	mergedTs = append(mergedTs, t)
-		// } more than one name -> remove as we cannot use it
-	}
-	for _, ts := range m {
-		mergedT := ts[0]
-		for _, t := range ts[1:] {
-			for k, v := range t.value {
-				mergedT.value[k] = v
-			}
-		}
-		mergedTs = append(mergedTs, mergedT)
-	}
-	*ts = mergedTs
-}
-
-func (ts *Types) definitions() string {
-	definitions := ""
-	for _, t := range *ts {
-		definitions += fmt.Sprintf("\ntype %s %s\n\n", t.names[0], ts.definition(t.names[0], t.value, false))
-	}
-	return definitions
-}
-
-func (ts *Types) definition(name string, v interface{}, nested bool) string {
-	switch v := v.(type) {
-	case string, int, float64, bool:
-		return fmt.Sprintf("%T", v)
-	case []interface{}:
-		if len(v) == 0 {
-			return "[]interface{}"
-		}
-		return "[]" + ts.definition(name, v[0], true)
-	case map[string]interface{}:
-		return ts.getStructType(name, v, nested)
-	default:
-		return "interface{}"
-	}
-}
 
 // standardize recursively standardizes v to default values for the respective go type
 func standardize(v interface{}) interface{} {
@@ -137,7 +27,7 @@ func standardize(v interface{}) interface{} {
 		return 0
 	case []interface{}:
 		if len(v) == 0 {
-			return []interface{}{Any{}}
+			return []interface{}{struct{}{}}
 		}
 		return []interface{}{standardize(v[0])}
 	case map[string]interface{}:
@@ -147,7 +37,7 @@ func standardize(v interface{}) interface{} {
 		}
 		return m
 	default:
-		return Any{}
+		return struct{}{}
 	}
 }
 
@@ -156,13 +46,12 @@ func main() {
 	if err != nil {
 		log.Panic(err)
 	}
-	types := Types{}
+	out := "package slack\n"
 	for url, value := range m {
 		name := camelCase(filepath.Base(url))
-		types.addTypes(name, value)
+		out += fmt.Sprintf("type %s %s\n\n", name, generateType(value))
 	}
-	// types.merge()
-	ioutil.WriteFile("generated_types.go", []byte(types.definitions()), 0644)
+	ioutil.WriteFile("generated_types.go", []byte(out), 0644)
 }
 
 func download(path string) error {
