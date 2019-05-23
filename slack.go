@@ -218,7 +218,7 @@ func (s *serveMux) callHandler(kind string, bytes []byte, debug bool) error {
 		return err
 	}
 	if debug {
-		log.Printf("Calling %s (%s): %T", kind, handlerKind, handler.v.Interface())
+		log.Printf("Calling {route: %s, typed %s, handler: %T}", kind, handlerKind, handler.v.Interface())
 	}
 	if err := handler.v.Call([]reflect.Value{v.Elem()})[0].Interface(); err != nil {
 		return err.(error)
