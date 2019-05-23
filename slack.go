@@ -42,7 +42,7 @@ type handler struct {
 }
 
 type User struct {
-	Id   string `json: "id"`
+	ID   string `json: "id"`
 	Name string `json: "name"`
 }
 
@@ -121,6 +121,8 @@ func (c *Connection) Send(v interface{}) error {
 	}
 	return websocket.Message.Send(c.socket, bytes)
 }
+
+func (c *Connection) User() User { return c.user }
 
 func (c *Connection) receive() ([]byte, string, error) {
 	bytes, e := []byte{}, baseEvent{}
