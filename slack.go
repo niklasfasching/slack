@@ -55,8 +55,9 @@ type rtmResponse struct {
 }
 
 type baseEvent struct {
-	Type    string `json:"type"`
-	SubType string `json:"subtype"`
+	Error   interface{} `json:"error"`
+	Type    string      `json:"type"`
+	SubType string      `json:"subtype"`
 }
 
 type errorEvent struct {
@@ -98,6 +99,9 @@ func (c *Connection) Start() error {
 }
 
 func (c *Connection) Send(v interface{}) error {
+	if c.socket == nil {
+		return errors.New("cannot send: socket closed")
+	}
 	bytes, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -137,6 +141,9 @@ func (c *Connection) receive() ([]byte, string, error) {
 		return nil, "", err
 	}
 	kind := e.Type + "/" + e.SubType
+	if e.Error != nil {
+		kind = "error/"
+	}
 	return bytes, kind, nil
 }
 
