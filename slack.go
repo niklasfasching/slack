@@ -15,7 +15,7 @@ import (
 )
 
 type API interface {
-	Start(context interface{}) error
+	Start() error
 	Send(v interface{}) error
 	Handle(kind string, handlerFunc interface{})
 	User() User
@@ -33,7 +33,6 @@ type Connection struct {
 }
 
 type serveMux struct {
-	context  reflect.Value
 	handlers map[string]handler
 }
 
@@ -72,8 +71,8 @@ type pingPongEvent struct {
 	Time time.Time `json:"time"`
 }
 
-func (c *Connection) Start(context interface{}) error {
-	c.context, c.errors = reflect.ValueOf(context), make(chan error)
+func (c *Connection) Start() error {
+	c.errors = make(chan error)
 	r := rtmResponse{}
 	err := get(fmt.Sprintf("https://slack.com/api/rtm.connect?token=%s", c.Token), &r)
 	if err != nil {
@@ -195,8 +194,8 @@ func (c *Connection) handlePongEvent(bytes []byte) error {
 
 func (s *serveMux) Handle(kind string, handlerFunc interface{}) {
 	v := reflect.ValueOf(handlerFunc)
-	if t := v.Type(); t.NumIn() != 2 || t.NumOut() != 1 || t.Out(0) != reflect.TypeOf((*error)(nil)).Elem() {
-		panic(fmt.Errorf("handlerFunc must be in the format func(Context, T) error"))
+	if t := v.Type(); t.NumIn() != 1 || t.NumOut() != 1 || t.Out(0) != reflect.TypeOf((*error)(nil)).Elem() {
+		panic(fmt.Errorf("handlerFunc must be in the format func(T) error"))
 	}
 	if _, ok := s.handlers[kind]; ok {
 		panic(fmt.Errorf("handler for event kind %s has already been registered", kind))
@@ -204,7 +203,7 @@ func (s *serveMux) Handle(kind string, handlerFunc interface{}) {
 	if s.handlers == nil {
 		s.handlers = map[string]handler{}
 	}
-	s.handlers[kind] = handler{v, v.Type().In(1)}
+	s.handlers[kind] = handler{v, v.Type().In(0)}
 }
 
 func (s *serveMux) callHandler(kind string, bytes []byte, debug bool) error {
@@ -219,7 +218,7 @@ func (s *serveMux) callHandler(kind string, bytes []byte, debug bool) error {
 	if debug {
 		log.Printf("Calling %s (%s): %T", kind, handlerKind, handler.v.Interface())
 	}
-	if err := handler.v.Call([]reflect.Value{s.context, v.Elem()})[0].Interface(); err != nil {
+	if err := handler.v.Call([]reflect.Value{v.Elem()})[0].Interface(); err != nil {
 		return err.(error)
 	}
 	return nil

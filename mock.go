@@ -2,7 +2,6 @@ package slack
 
 import (
 	"encoding/json"
-	"reflect"
 )
 
 type MockConnection struct {
@@ -12,8 +11,7 @@ type MockConnection struct {
 	serveMux
 }
 
-func (c *MockConnection) Start(context interface{}) error {
-	c.context = reflect.ValueOf(context)
+func (c *MockConnection) Start() error {
 	for _, v := range c.In {
 		bytes, err := json.Marshal(v)
 		if err != nil {
