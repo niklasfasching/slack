@@ -113,13 +113,11 @@ func (c *Connection) Send(v interface{}) error {
 	}
 	m["id"] = c.messageIdCounter
 	c.messageIdCounter++
-	if c.Debug {
-		log.Println("Sent:", prettyPrintJSON(m))
-	}
 	bytes, err = json.Marshal(m)
 	if err != nil {
 		return err
 	}
+	debugLog(c.Debug, "Sent: ", bytes)
 	if len(bytes) >= 16000 {
 		return fmt.Errorf("message must be under 16k bytes long: %#v", m)
 	}
@@ -134,9 +132,7 @@ func (c *Connection) receive() ([]byte, string, error) {
 	if err != nil {
 		return nil, "", err
 	}
-	if c.Debug {
-		log.Println("Received:", prettyPrintMessage(bytes))
-	}
+	debugLog(c.Debug, "Received: ", bytes)
 	if err := json.Unmarshal(bytes, &e); err != nil {
 		return nil, "", err
 	}
@@ -243,24 +239,6 @@ func (s *serveMux) getHandler(kind string) (handler, string, bool) {
 	return handler, baseType, ok
 }
 
-func prettyPrintMessage(bytes []byte) string {
-	raw := map[string]interface{}{}
-	if err := json.Unmarshal(bytes, &raw); err == nil {
-		return prettyPrintJSON(raw)
-	} else {
-		return string(bytes)
-	}
-}
-
-func prettyPrintJSON(v interface{}) string {
-	out := strings.Builder{}
-	json := json.NewEncoder(&out)
-	json.SetEscapeHTML(false)
-	json.SetIndent("", "  ")
-	json.Encode(v)
-	return out.String()
-}
-
 func get(url string, v interface{}) error {
 	resp, err := http.Get(url)
 	if err != nil {
@@ -271,4 +249,25 @@ func get(url string, v interface{}) error {
 		return err
 	}
 	return json.Unmarshal(body, v)
+}
+
+func debugLog(debug bool, prefix string, bytes []byte) {
+	if !debug {
+		return
+	}
+	m := map[string]interface{}{}
+	if err := json.Unmarshal(bytes, &m); err != nil {
+		log.Println(prefix, string(bytes))
+	} else if t, ok := m["type"].(string); ok && (t != "ping" && t != "pong") {
+		log.Println(prefix, prettyPrintJSON(m))
+	}
+}
+
+func prettyPrintJSON(v interface{}) string {
+	out := strings.Builder{}
+	json := json.NewEncoder(&out)
+	json.SetEscapeHTML(false)
+	json.SetIndent("", "  ")
+	json.Encode(v)
+	return out.String()
 }
