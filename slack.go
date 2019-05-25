@@ -184,7 +184,7 @@ func (c *Connection) handleErrorEvent(bytes []byte) error {
 	if err != nil {
 		return errors.New(string(bytes))
 	}
-	return fmt.Errorf("%s (code: %d)", e.Error.Msg, e.Error.Code)
+	return fmt.Errorf("%d: %s (%s)", e.Error.Code, e.Error.Msg, string(bytes))
 }
 
 func (c *Connection) handlePongEvent(bytes []byte) error {
